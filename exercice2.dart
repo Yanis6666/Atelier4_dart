@@ -13,3 +13,13 @@ class Point {
   print("Point : ($_x, $_y)");
   }
 }
+
+void main() {
+  Point p = Point(2.0, 5.0);
+
+  p.display();
+
+  p.move(3.0, 2.0);
+
+  p.display();
+}
