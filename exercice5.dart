@@ -1,0 +1,42 @@
+
+abstract class Forme {
+  double calculerAire();
+
+  void afficherMessage() {
+    print("Calcul de l'aire...");
+  }
+}
+
+class Cercle extends Forme {
+  final double rayon;
+
+  Cercle(this.rayon);
+
+  @override
+  double calculerAire() {
+    return 3.14 * rayon * rayon;
+  }
+}
+
+class Rectangle extends Forme {
+  final double longueur;
+  final double largeur;
+
+  Rectangle(this.longueur, this.largeur);
+
+  @override
+  double calculerAire() {
+    return longueur * largeur;
+  }
+}
+
+void main() {
+  Cercle cercle = Cercle(5);
+  Rectangle rectangle = Rectangle(4, 6);
+
+  cercle.afficherMessage();
+  print(cercle.calculerAire());
+
+  rectangle.afficherMessage();
+  print(rectangle.calculerAire());
+}
